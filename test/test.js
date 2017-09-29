@@ -23,7 +23,6 @@ var sandbox;
 
 
 
-
 describe("Twitter api call", function() {
     it("should return without errors", function(done) {
         twitter.doAllTwitterRequests(function(error, tweets) {
@@ -43,6 +42,8 @@ describe("Twitter api call", function() {
             done(); 
         });
     });
+    
+  
 }); 
 
 var stub = sinon.stub(getty, "makeApiRequest").callsFake(function(callback) {
@@ -62,6 +63,12 @@ describe("Getty api call", function() {
         });
     }); 
     
+   it("should return null", function(done) {
+       expect(null).to.be.a('null');
+       done();
+   });
+   
     
     
-}); 
+    
+});
